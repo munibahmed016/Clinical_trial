@@ -55,7 +55,7 @@ const ClinicalTrail = () => {
                         </div>
                         <div className="overflow-hidden rounded-lg">
                             <embed
-                                src="/bars.pdf"
+                                src="/Progsterol.pdf"
                                 type="application/pdf"
                                 width="100%"
                                 height="600px"
