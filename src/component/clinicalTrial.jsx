@@ -3,8 +3,6 @@ import Banner from "../assets/banner.jpg";
 import Circle from "../assets/glass_circle.png";
 
 const ClinicalTrail = () => {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
     return (
         <div className="bg-blue-50 flex flex-col items-center py-10 px-4 sm:px-10 md:px-20">
             {/* Banner Section */}
@@ -19,21 +17,8 @@ const ClinicalTrail = () => {
                         ProGsterol - Reverse Insulin Resistance
                     </h2>
                     <p className="text-black mb-6">
-                        ProGsterol's main ingredient Deglusterol is the world's first new dietary Ingredient (NDI) as a synthetic peptide approved by U.S FDA. It increases the sensitivity of insulin receptors and affects cells with insulin resistance. If you want to learn more about ProGsterol, please click the button below.
+                        ProGsterol's main ingredient Deglusterol is the world's first new dietary Ingredient (NDI) as a synthetic peptide approved by U.S FDA. It increases the sensitivity of insulin receptors and affects cells with insulin resistance.
                     </p>
-                    <a
-                        href="/Progsterol.pdf"
-                        className="bg-[#09346b] text-white py-2 px-6 rounded-lg shadow-md hover:bg-[#0f273a] transition duration-300 ease-in-out"
-                        target={isMobile ? "_blank" : "_self"} // Open in a new tab on mobile
-                        rel="noopener noreferrer"
-                    >
-                        View Clinical Trial PDF
-                    </a>
-                    {isMobile && (
-                        <p className="text-sm text-gray-600 mt-2">
-                            For a better experience, we recommend opening the PDF in an external app on your device.
-                        </p>
-                    )}
                 </div>
 
                 {/* Image Section */}
@@ -45,6 +30,22 @@ const ClinicalTrail = () => {
                     <p className="text-sm sm:text-base text-black">
                         For Healthy Glucose Level with ProGsterol
                     </p>
+                </div>
+            </div>
+
+            {/* PDF Display Section */}
+            <div className="w-full max-w-5xl mt-10">
+                <h2 className="text-xl font-semibold text-center text-[#09346b] mb-4">
+                    Clinical Trial PDF
+                </h2>
+                <div className="overflow-hidden rounded-lg shadow-md">
+                    <embed
+                        src="/Progsterol.pdf"
+                        type="application/pdf"
+                        width="100%"
+                        height="600px"
+                        className="rounded-lg"
+                    />
                 </div>
             </div>
         </div>
